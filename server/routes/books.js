@@ -5,7 +5,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const Book = require('../models/Book');
 
-const JWT_SECRET = ProcessingInstruction.env.JWT_SECRET || 'devsecret'
+const JWT_SECRET = process.env.JWT_SECRET || 'devsecret'
 
 function auth(req, res, next) {
     const h = req.headers.authorization;

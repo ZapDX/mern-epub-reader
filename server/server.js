@@ -22,7 +22,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/books', booksRoutes);
 
-const PORT = ProcessingInstruction.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 mongoose.connect(process.env.MONGO_URI, {})
     .then(()=> {
