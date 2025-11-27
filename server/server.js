@@ -11,6 +11,9 @@ const uploadRoutes = require('./routes/upload');
 const booksRoutes = require('./routes/books');
 
 const app = express();
+app.use((req, res, next) => {
+  next();
+});
 app.use(cors());
 app.use(express.json());
 
